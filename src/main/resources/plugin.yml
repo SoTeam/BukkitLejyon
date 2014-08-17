@@ -1,0 +1,4 @@
+name: {$PluginName}
+main: so.team.bukkitlejyon.BL
+authors: [DonduranAtes,Speaw,IRFN]
+version: ${version}
