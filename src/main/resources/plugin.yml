@@ -1,4 +1,9 @@
-name: {$PluginName}
+name: BukkitLejyon
 main: so.team.bukkitlejyon.BL
 authors: [DonduranAtes,Speaw,IRFN]
 version: ${version}
+description: BukkitLejyon
+
+commands:
+  bl:
+    description: komut

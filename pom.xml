@@ -28,7 +28,7 @@
 
 	<build>
 		<sourceDirectory>src/main/java</sourceDirectory>
-		<finalName>DuelMe</finalName>
+		<finalName>BukkitLejyon</finalName>
 		<resources>
 			<resource>
 				<targetPath>.</targetPath>
