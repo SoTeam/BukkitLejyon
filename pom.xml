@@ -14,6 +14,11 @@
 			<id>md-5-repo</id>
 			<url>http://repo.md-5.net/content/groups/public/</url>
 		</repository>
+		<repository>
+			<id>comphenix-rep</id>
+			<name>Comphenix Repository</name>
+			<url>http://repo.comphenix.net/content/groups/public</url>
+		</repository>
 	</repositories>
 
 	<dependencies>
@@ -21,6 +26,11 @@
 			<groupId>org.spigotmc</groupId>
 			<artifactId>spigot</artifactId>
 			<version>1.7.10-R0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>com.comphenix.protocol</groupId>
+			<artifactId>ProtocolLib</artifactId>
+			<version>3.1.0</version>
 		</dependency>
 	</dependencies>
 
