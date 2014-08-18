@@ -53,6 +53,7 @@ public class NPC {
 	}
 
 
+	@SuppressWarnings("deprecation")
 	public NPC(World world, String isim, int id, Location koordinat, int elindekiID) {
 		this.isim = isim;
 		this.world = world;
@@ -103,6 +104,7 @@ public class NPC {
 		npcler.add(this);
 	}
 
+	@SuppressWarnings("deprecation")
 	public void gönder(Location koordinat) {
 		PacketPlayOutEntityTeleport tp = new PacketPlayOutEntityTeleport();
 		setPrivateField(PacketPlayOutEntityTeleport.class, tp, "a", id);
@@ -131,10 +133,12 @@ public class NPC {
 		return (byte) ((value * 256.0F) / 360.0F);
 	}
 
+	@SuppressWarnings("unused")
 	private byte getCompressedAngle2(float value) {
 		return (byte) ((value * 256.0F) / 360.0F);
 	}
 
+	@SuppressWarnings("deprecation")
 	public void sil() {
 		PacketPlayOutEntityDestroy packet = new PacketPlayOutEntityDestroy(id);
 		for (Player p : Bukkit.getOnlinePlayers()) {
@@ -142,6 +146,7 @@ public class NPC {
 		}
 	}
 
+	@SuppressWarnings("deprecation")
 	public void itemleriAyarla(ItemStack elindeki, ItemStack botlarý, ItemStack pantolon,
 			ItemStack göðüslük, ItemStack kask) {
 
