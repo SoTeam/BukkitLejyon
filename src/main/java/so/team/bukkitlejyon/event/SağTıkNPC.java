@@ -12,7 +12,6 @@ import so.team.bukkitlejyon.BL;
 import so.team.bukkitlejyon.npc.NPC;
 import so.team.bukkitlejyon.npc.NPCFactory;
 import so.team.bukkitlejyon.npc.NPCInteractEvent;
-import so.team.bukkitlejyon.npc.SpawnNPC;
 
 public class SaðTýkNPC implements Listener {
 

@@ -2,7 +2,6 @@ package so.team.bukkitlejyon;
 
 import java.util.HashMap;
 
-import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
@@ -12,22 +11,27 @@ import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.plugin.messaging.PluginMessageListener;
 
-import com.google.common.io.ByteArrayDataInput;
-import com.google.common.io.ByteStreams;
-
 import so.team.bukkitlejyon.api.PluginMesajAPI;
+import so.team.bukkitlejyon.cmdBlock.api.InputGuiAPI;
+import so.team.bukkitlejyon.cmdBlock.api.InputListener;
+import so.team.bukkitlejyon.cmdBlock.plugin.InputGuiPacketListener;
 import so.team.bukkitlejyon.event.SaðTýkNPC;
 import so.team.bukkitlejyon.npc.NPCFactory;
 import so.team.bukkitlejyon.npc.SpawnNPC;
+
+import com.google.common.io.ByteArrayDataInput;
+import com.google.common.io.ByteStreams;
 
 public class BL extends JavaPlugin implements PluginMessageListener {
 	
 	public static BL instance;
 	String menuTitle = "SonOyuncu Lejyün Menüsü";
+	public static InputGuiAPI cmdBlock;
 	
 	//Classlar
 		public static PluginMesajAPI pma;
 		public static Menu menu;
+		public static InputListener il;
 	//Classlar
 		
 		
@@ -55,6 +59,7 @@ public class BL extends JavaPlugin implements PluginMessageListener {
 		//Classlar
 			pma = new PluginMesajAPI();
 			menu = new Menu();
+			il = new InputListener();
 		//Classlar
     	
 		if (getConfig().contains("NPC.1")){
@@ -66,6 +71,8 @@ public class BL extends JavaPlugin implements PluginMessageListener {
         PluginManager pm = this.getServer().getPluginManager();
         pm.registerEvents(new SaðTýkNPC(), this);
         pm.registerEvents(new InventoryClick(), this);
+        pm.registerEvents(new InputListener(), this);
+        new InputGuiPacketListener(this);
         
     }
     
