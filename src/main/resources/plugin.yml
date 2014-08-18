@@ -5,5 +5,5 @@ version: ${version}
 description: BukkitLejyon
 
 commands:
-  bl:
-    description: komut
+  npc:
+    description: NPC
